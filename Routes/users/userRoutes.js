@@ -5,7 +5,7 @@ const jwtGenerator = require("../../utils/jwtGenerator");
 const jsonParser = express.json();
 const Router = express.Router();
 const authorization = require("../../utils/authorization");
-const services = require("./userService");
+
 
 
 // User Registration Route

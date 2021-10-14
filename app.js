@@ -5,6 +5,7 @@ const { NODE_ENV } = require('./config');
 const helmet = require('helmet');
 const app = express();
 const userRouter = require('./Routes/users/userRoutes');
+const moodRouter = require('./Routes/moods/moodRoutes');
 
 // MIDDLEWARE
 app.use(express.json());
@@ -13,7 +14,7 @@ app.use(cors());
 
 // ROUTES
 app.use('/api/users', userRouter);
-
+app.use('/api/moods', moodRouter);
 
 
 
