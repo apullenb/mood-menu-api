@@ -18,4 +18,14 @@ Router.get('/', jsonParser, async (req, res) => {
     }
 })
 
+Router.delete("/:id", async (req, res, next) => {
+    const { id } = req.params;
+  
+    service.deleteActivityByID(req.app.get("db"), id)
+      .then(() => {
+        res.status(204).end();
+      })
+      .catch(next);
+  });
+
 module.exports = Router;

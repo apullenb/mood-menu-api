@@ -9,7 +9,7 @@ const services = {
 
   deleteActivityByID(db, id) {
     return db('activities')
-      .where('actID', id)
+      .where('actid', id)
       .delete();
   }
   
