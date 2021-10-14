@@ -6,6 +6,8 @@ const helmet = require('helmet');
 const app = express();
 const userRouter = require('./Routes/users/userRoutes');
 const moodRouter = require('./Routes/moods/moodRoutes');
+const actRouter = require('./Routes/activities/activitiesRoutes');
+
 
 // MIDDLEWARE
 app.use(express.json());
@@ -15,6 +17,7 @@ app.use(cors());
 // ROUTES
 app.use('/api/users', userRouter);
 app.use('/api/moods', moodRouter);
+app.use('/api/activities', actRouter);
 
 
 
